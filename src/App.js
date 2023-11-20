@@ -65,18 +65,18 @@ function App() {
 
     const handleCopyPassword = (e) => {
       if (password === "" ){
-        toast.error('Nothing to copy', {position: 'top-center'});
+        toast.error('Rien ) copier', {position: 'top-center'});
       }
       else {
         copyToClipboard();
-        toast.success('Password successfully copied to clipboard', {position:'top-center'})
+        toast.success('Mot de passe copié avec succès', {position:'top-center'})
       }
     }
 
 
  return(
   <div className="App">
-    <h1>Password Generator</h1>
+    <h1>Generateur de Mot de Passe</h1>
     <ToastContainer/>
     <div className="wrapper">
       <div className="generator">
@@ -87,7 +87,7 @@ function App() {
           </button>
         </div>
         <div className="form-group">
-          <label htmlFor="password-strengh">Password length</label>
+          <label htmlFor="password-strengh">Taille du mot de passe</label>
           <input 
           defaultValue={passwordLength}
           onChange={(e) => setPasswordLength(e.target.value)}
@@ -98,7 +98,7 @@ function App() {
             />
         </div>
         <div className="form-group">
-          <label htmlFor="uppercase-letters">Include UpperCase Letters</label>
+          <label htmlFor="uppercase-letters">Ajouter des lettres majuscules</label>
           <input
           checked={includeUppercase}
           onChange={(e) => setIncludeUppercase(e.target.checked)}
@@ -109,7 +109,7 @@ function App() {
             />
         </div>
         <div className="form-group">
-          <label htmlFor="lowercase-letters">Include lowerCase Letters</label>
+          <label htmlFor="lowercase-letters">Ajouter des lettres minuscules</label>
           <input
           checked={includeLowercase}
           onChange={(e) => setIncludeLowercase(e.target.checked)} 
@@ -120,7 +120,7 @@ function App() {
             />
         </div>
         <div className="form-group">
-          <label htmlFor="include-numbers">Include Numbers</label>
+          <label htmlFor="include-numbers">Ajouter des chiffres</label>
           <input 
           checked={includeNumbers}
           onChange={(e) => setIncludeNumbers(e.target.checked)}
@@ -131,10 +131,10 @@ function App() {
             />
         </div>
         <div className="form-group">
-          <label htmlFor="include-symbols">Include Symbols</label>
+          <label htmlFor="include-symbols">Ajouter des symboles</label>
           <input 
           checked={includeSymbols}
-          onChange={(e) => setIncludeSymbols}
+          onChange={(e) => setIncludeSymbols(e.target.checked)}
           type='checkbox'
            name="include-symbols" 
            id="include-symbols"
@@ -142,7 +142,7 @@ function App() {
             />
         </div>
         <button onClick={handleGeneratePassword} className="gr__log__button">
-          Generate Password
+          Generer 
         </button>
       </div>
     </div>
